@@ -1,3 +1,11 @@
+// PULL FROM MAIN BRANCH
+// git checkout dev        # gets you "on branch dev"
+// git fetch origin        # gets you up to date with origin
+// git merge origin/main
+
+// PUSH FROM DEVELOPMENT BRANCH TO MAIN BRANCH
+// git push origin develop:main
+
 let n = 0
 let isStyle1 = 1;
 const pages = ['Page_landing', 'Page_portfolio', 'Page_qualifications', 'Page_service', 'Page_ai'];
