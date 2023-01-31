@@ -4,7 +4,10 @@
 // git merge origin/main
 
 // PUSH FROM DEVELOPMENT BRANCH TO MAIN BRANCH
+// git checkout dev
 // git push origin dev:main
+// git checkout main
+// git pull
 
 let n = 0
 let isStyle1 = 1;
