@@ -8,6 +8,14 @@
   
   <link id="whichStyle" rel="stylesheet" href="./index1.css">
 
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,800&display=swap" rel="stylesheet">  -->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,800&display=swap');
+  </style> 
+
   <link rel="apple-touch-icon" type="image/x-icon" href="./assets/will.ico">
   <link rel="icon" type="image/x-icon" href="./assets/will.ico">
   
@@ -15,29 +23,29 @@
 
 </head>
 <body>
-  <div id='navbar'>
+  <nav id='navbar'>
     --navbar--
     <div>[ current page ]</div>
     <button type="button" onclick="switchStyle()">Change Style</button>
     <div>
       [ = ]
-      <div>
+      <button>
         <a href="#" onclick="return show('Page_landing');">landing</a>
-      </div>
-      <div>
+      </button>
+      <button>
         <a href="#" onclick="return show('Page_portfolio');">portfolio</a>
-      </div>
-      <div>
+      </button>
+      <button>
         <a href="#" onclick="return show('Page_qualifications');">qualifications</a>
-      </div>
-      <div>
+      </button>
+      <button>
         <a href="#" onclick="return show('Page_service');">service</a>
-      </div>
+      </button>
     </div>
-  </div>
+  </nav>
 
 
-  <!-- PAGE 1  -->
+  <!-- LANDING  -->
   <div id='Page_landing' style='display:block'>
 
     <div>
@@ -45,21 +53,18 @@
         cool 3d image thing i will do i swear
       </div>
       <div>
-        <div>
-          github
-        </div>
-        <div>
-          linkedin
-        </div>
-        <div>
-          gmail
-        </div>
+        <button>github</button>
+        <button>linkedin</button>
+        <button>gmail</button>
         <div>
           <p>peicasey@gmail.com</p>
           <p>caseypei@tamu.edu</p>
         </div>
         <div>
           quirky cute image thing
+          <button>
+            <a href="#" onclick="return show('Page_ai');">ai</a>
+          </button>
         </div>
       </div>
     </div>
@@ -79,15 +84,15 @@
 
     <div>
       click -->
-      <div>
+      <button>
         <a href="#" onclick="return show('Page_portfolio');">portfolio</a>
-      </div>
-      <div>
+      </button>
+      <button>
         <a href="#" onclick="return show('Page_qualifications');">qualifications</a>
-      </div>
-      <div>
+      </button>
+      <button>
         <a href="#" onclick="return show('Page_service');">service</a>
-      </div>
+      </button>
     </div>
 
     <div>
@@ -101,7 +106,7 @@
     <p id="output"></p>
   </div>
     
-  <!-- PAGE 2 -->
+  <!-- PORTFOLIO -->
   <div id='Page_portfolio' style="display:none">
     <div>
       <h1>PORTFOLIO</h1>
@@ -109,11 +114,244 @@
         search bar P
       </div>
       <div>
+        <div>things to generate the projects from JSON</div>
+      </div>
+    </div>
+    <div>
+      <div>quirky thing to have project information displayed</div>
+      <button>
+        <a href="#" onclick="return show('Page_ai');">ai</a>
+      </button>
+    </div>
+    <div>
+      <div>more projects</div>
+      <button>github</button>
+      <button>devpost</button>
+      <button>itch.io</button>
+    </div>
+  </div>
+
+  <!-- QUALIFICATIONS -->
+  <div id='Page_qualifications' style="display:none">
+    <div>
+      <div>
         <div>
-          
+          cute robot
+          <button>
+            <a href="#" onclick="return show('Page_ai');">ai</a>
+          </button>
+        </div>
+        <button>
+          download resume
+        </button>
+      </div>
+      <div>
+        <button>linkedin</button>
+        <button>gmail</button>
+        <p>peicasey@gmail.com</p>
+        <p>caseypei@tamu.edu</p>
+      </div>
+    </div>
+    <div>
+      <h1>QUALIFICATIONS AND SKILLS</h1>
+      <div>
+        <h2>LANGUAGES</h2>
+        <p>C++</p>
+        <p>R</p>
+        <p>Python</p>
+        <p>Java</p>
+        <p>C</p>
+        <p>C#</p>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JS</p>
+        <p>Scheme</p>
+        <p>Assembly</p>
+      </div>
+      <div>
+        <h2>RELEVANT COURSEWORK</h2>
+        <ul>
+          <li>data structures and algorithms</li>
+          <li>software engineering (currently taking)</li>
+          <li>statistics</li>
+          <li>computer organization</li>
+          <li>computer systems (currently taking)</li>
+          <li>discrete structures</li>
+        </ul>
+      </div>
+      <div>
+        <h2>WORK EXPERIENCE</h2>
+        <div>
+          <h3>ARBIN INSTRUMENTS - blabal</h3>
+          <p>2023 summer</p>
+          <p>description of what i did and such</p>
+        </div>
+        <div>
+          <h3>BIOSTATISTICS RESEARCH ASSISTANT - blabal</h3>
+          <p>2022-2023 dates</p>
+          <p>description of what i did and such</p>
+        </div>
+        <div>
+          <h3>HAMILL RESEARCH INTERN - blabal</h3>
+          <p>2022 summer</p>
+          <p>description of what i did and such</p>
+        </div>
+      </div>
+      <div>
+        <h2>EDUCATION</h2>
+        <div>
+          <h3>TEXAS A&M UNIVERSITY</h3>
+          <p>August 2021 to May 2025</p>
+          <p>BS in Computer Science, minoring in Statistics</p>
+          <p>Engineering Honors, Craig and Galen Brown Scholar</p>
+        </div>
+        <div>
+          <h3>LA CUEVA HIGH SCHOOL</h3>
+          <p>2017-2021</p>
+          <p>Valedictorian</p>
+        </div>
+      </div>
+      <div>
+        <h2>AREAS OF INTEREST</h2>
+        <ul>
+          <li>
+            <div>
+              <h4>software development</h4>
+              <p>why you are interested in software development</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h4>biostatistics</h4>
+              <p>why you are interested in biostatistics</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h4>AI/ML</h4>
+              <p>why you are interested in AI/ML</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE -->
+  <div id='Page_service' style="display:none">
+    <div>
+      <div>
+        <div>
+          <h1>LEADERSHIP AND SERVICE</h1>
+          <p>blurb about how service is important and stuff</p>
+        </div>
+        <div>
+          link to the ai page
+          <button>
+            <a href="#" onclick="return show('Page_ai');">ai</a>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            ACC image + link to ACC
+            <img>
+          </div>
+          <div>
+            <h3>AGGIE CODING CLUB - projects chair</h3>
+            <p>2021-present</p>
+            <p>blurb about aggie coding club from resume</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            TAO image + link to TAO
+            <img>
+          </div>
+          <div>
+            <h3>TEACHING ASSISTANT ORGANIZATION - vice-president</h3>
+            <p>2023-present</p>
+            <p>blurb about tao from resume</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            tagd image + link to tagd
+            <img>
+          </div>
+          <div>
+            <h3>TEXAS A&M GAME DEVELOPERS - member</h3>
+            <p>2021-present</p>
+            <p>blurb about tagd from resume</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            datathon + datathon link
+            <img>
+          </div>
+          <div>
+            <h3>TAMU DATATHON - volunteer</h3>
+            <p>2021</p>
+            <p>blurb about volunteering at datathon</p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- AI PAGE -->
+  <div id='Page_ai' style="display:none">
+    <header>
+      <h1>Artificial Intelligence</h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#trends">Trends</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>Artificial Intelligence (AI) is the simulation of human intelligence in machines that are programmed to think and act like humans. It involves creating algorithms and computer programs that can recognize patterns, learn from data, and make decisions without human intervention.</p>
+      </section>
+      <section id="history">
+        <h2>History</h2>
+        <p>The history of AI can be traced back to the ancient Greek myth of Pygmalion and Galatea, where a sculptor creates a statue that comes to life. However, the modern field of AI began to take shape in the 1950s and 1960s, with the development of computer programs that could perform simple tasks such as playing chess and solving mathematical problems.</p>
+      </section>
+      <section id="applications">
+        <h2>Applications</h2>
+        <p>AI has numerous applications in various industries, including finance, healthcare, transportation, and retail. Some examples include:</p>
+        <ul>
+          <li>Fraud detection in financial transactions</li>
+          <li>Diagnosing medical conditions</li>
+          <li>Autonomous vehicles</li>
+          <li>Recommender systems in e-commerce</li>
+        </ul>
+      </section>
+      <section id="trends">
+        <h2>Trends</h2>
+        <p>Some of the current trends in AI include:</p>
+        <ul>
+          <li>Advancements in Natural Language Processing (NLP) and speech recognition</li>
+          <li>Developments in reinforcement learning and deep learning</li>
+          <li>Increased use of AI in industries such as agriculture and education</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © 2023 Computer Science Student</p>
+    </footer>
+  </div>
+
+  <div>
+    <footer>
+      Made with love by Casey Pei :D
+    </footer>
   </div>
 
 </body>
