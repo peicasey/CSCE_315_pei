@@ -41,6 +41,17 @@ nav {
     
 }
 
+/* EMPHASIS */
+.emphasize {
+  font-weight: normal;
+}
+
+.emphasize:hover {
+  font-weight: bold;
+  animation: emphasize-anim 0.2s ease-in;
+  animation-fill-mode: forwards;
+}
+
 /* based off of: Joel Olawanle  */
 
 .dropdown {
@@ -242,6 +253,73 @@ nav {
   margin-bottom:5px;
 }
 
+/* TOOLTIP */
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  top: 80%;
+  left: 80%; 
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* PROJECT ITEMS */
+
+#projects {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 400px);
+  grid-row-gap: .5em;
+  grid-column-gap: 1em;
+}
+
+.project-item {
+  background: white;
+
+  text-align: center;
+
+  outline-style: solid;
+  outline-width: 0.1em;
+  outline-color: black;
+}
+
+
 /* FOOTER */
 
 footer {
@@ -305,4 +383,9 @@ footer {
 @keyframes drop {
   0% { transform: translate(0px,  -10px); }
   100% { transform: translate(0px,  0px); }
+}
+
+@keyframes emphasize-anim {
+  0% { transform: translate(0px,  0px); }
+  100% { transform: translate(5px,  0px); }
 }

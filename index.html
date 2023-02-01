@@ -27,7 +27,7 @@
   <nav style="margin-top: 20px; margin-bottom: 20px;">
     <div style="display:flex; column-gap: 20px; justify-content: space-between; align-items: center; margin-left: 15px;">
       <div class="grow-container">
-        <a class="circle-button"><img src="./assets/logo192.png" alt="logo" style="height:1em; width: 1em;"></i></a>
+        <a onclick="return show('Page_landing');"  class="circle-button"><img src="./assets/logo192.png" alt="logo" style="height:1em; width: 1em;"></i></a>
       </div>
       <div id="current-page">LANDING</div>
     </div>
@@ -56,8 +56,9 @@
       margin-top: 20px;
       margin-bottom: 40px;"
       >
-        <div style="display: inline;">
+        <div style="display: inline;" class="tooltip">
           <img class="bg-img" src="./assets/background.png" alt="background for 3d model of casey">
+          <span class="tooltiptext">put me down!</span>
           <img class="img3D" src="./assets/casey-spins.gif" alt="a 3d model of casey">
         </div>
       </div>
@@ -95,12 +96,12 @@
       <div>
         <div>
           <h1 class="big-text">HI, I'M CASEY PEI</h1>
-          <div style="white-space: nowrap; line-height: 0.8; text-indent: 40px;">
-            <p>honors computer science student at texas a&m</p>
-            <p>craig and galen brown scholar</p>
-            <p>projects chair at aggie coding club</p>
-            <p>vice-president of the teaching assistant organization</p>
-            <p>biostatistics research assistant</p>
+          <div style="white-space: nowrap; line-height: 0.8; text-indent: 40px; color:var(--custom-dark);">
+            <p class="emphasize">honors computer science student at texas a&m</p>
+            <p class="emphasize">craig and galen brown scholar</p>
+            <p class="emphasize">projects chair at aggie coding club</p>
+            <p class="emphasize">vice-president of the teaching assistant organization</p>
+            <p class="emphasize">biostatistics research assistant</p>
           </div>
         </div>
       </div>
@@ -141,26 +142,40 @@
     
   <!-- PORTFOLIO -->
   <div id='Page_portfolio' style="display:none">
-    <div>
-      <h1>PORTFOLIO</h1>
+    <duv style="display:grid; grid-template-columns: 0.8fr 0.5fr; grid-template-rows: 1fr; gap: 0px 0px;  margin-left: 40px; margin-right: 40px; margin-bottom: 40px;">
       <div>
-        search bar P
+        <h1>PORTFOLIO</h1>
+        <div>
+          search bar P
+        </div>
+        <div>
+          <div id="projects">things to generate the projects from JSON</div>
+        </div>
       </div>
       <div>
-        <div>things to generate the projects from JSON</div>
+        <div style="margin-bottom: 50%;">
+          quirky thing to have project information displayed
+        </div>
+        <button>
+          <a href="#" onclick="return show('Page_ai');">ai</a>
+        </button>
+        <div style="display: block; z-index: 9999; margin-right: 10%; margin-top: 20%;">
+          <div class="info-card">
+            <div>more projects</div>
+            <div class="icon-lineup">
+              <div class="grow-container">
+                <a href="https://github.com/peicasey/" class="circle-button"><i class="fa-brands fa-github adjust-circle" aria-hidden="true"></i></a>
+              </div>
+              <div class="grow-container">
+                <a href="https://pengso0o.itch.io/" class="circle-button"><i class="fa-brands fa-itch-io adjust-circle" aria-hidden="true"></i></a>
+              </div>
+              <div class="grow-container">
+                <a href="https://devpost.com/peicasey?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" class="circle-button"><img src="./assets/devpost-icon.png" alt="devpost logo" style="width:1em; height:1em;"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div>
-      <div>quirky thing to have project information displayed</div>
-      <button>
-        <a href="#" onclick="return show('Page_ai');">ai</a>
-      </button>
-    </div>
-    <div>
-      <div>more projects</div>
-      <button>github</button>
-      <button>devpost</button>
-      <button>itch.io</button>
     </div>
   </div>
 
