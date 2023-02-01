@@ -17,11 +17,13 @@ const pages = ['Page_landing', 'Page_portfolio', 'Page_qualifications', 'Page_se
 // page controller
 function show(shown) {
     for (let i=0; i<pages.length; i++){
+        console.log("we find that shown == pages[i] is " + shown == pages[i]);
         if (shown == pages[i]) {
-            if (shown == 'Page_landing') {
-                document.getElementById(shown).style.display = 'display:grid; grid-template-columns: 0.5fr 0.8fr; grid-template-rows: 1fr; gap: 0px 0px;';
+            if (pages[i] == 'Page_landing') {
+                document.getElementById(shown).style = "display:grid; grid-template-columns: 0.5fr 0.8fr; grid-template-rows: 1fr; gap: 0px 0px;";
             }
-            else { document.getElementById(shown).style.display = 'block'; }
+            else { document.getElementById(shown).style = 'display:block'; }
+
             document.getElementById('current-page').innerHTML = shown.substring(5, shown.length).toUpperCase();
             console.log(pages[i] + " is " + document.getElementById(pages[i]).style.display) + " !!!!!";
         }
@@ -30,7 +32,7 @@ function show(shown) {
             console.log(pages[i] + " is " + document.getElementById(pages[i]).style.display);
         }
     }
-    
+    console.log("---------------------------");
     return false;
 }
 
