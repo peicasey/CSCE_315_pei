@@ -18,14 +18,16 @@ const pages = ['Page_landing', 'Page_portfolio', 'Page_qualifications', 'Page_se
 function show(shown) {
     for (let i=0; i<pages.length; i++){
         if (shown == pages[i]) {
-            document.getElementById('current-page').innerHTML = shown.substring(5, shown.length).toUpperCase();
-            if (shown === 'Page_landing') {
+            if (shown == 'Page_landing') {
                 document.getElementById(shown).style.display = 'display:grid; grid-template-columns: 0.5fr 0.8fr; grid-template-rows: 1fr; gap: 0px 0px;';
             }
-            else { document.getElementById(shown).style.display='block'; }
+            else { document.getElementById(shown).style.display = 'block'; }
+            document.getElementById('current-page').innerHTML = shown.substring(5, shown.length).toUpperCase();
+            console.log(pages[i] + " is " + document.getElementById(pages[i]).style.display) + " !!!!!";
         }
         else {
-            document.getElementById(pages[i]).style.display='none';
+            document.getElementById(pages[i]).style.display = 'none';
+            console.log(pages[i] + " is " + document.getElementById(pages[i]).style.display);
         }
     }
     

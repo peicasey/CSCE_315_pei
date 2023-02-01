@@ -22,11 +22,12 @@ nav {
 }
 
 #current-page {
-    background-color: var(--custom-primary);
-    color: black;
+    background-color: var(--custom-dark);
+    color: var(--custom-light);
     
     outline-style: solid;
     outline-width: 0.15em;
+    outline-color: black;
     
     font-size: small;
     font-weight:bold;
@@ -91,6 +92,7 @@ nav {
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
     border-radius:5px;
+    outline-width: 0.1em;
   }
   
 /* original: Alex Moore */
@@ -105,7 +107,7 @@ nav {
 	letter-spacing: 1px;
 	display: inline-block;
 	text-decoration: none;
-    font-weight:bold;
+  font-weight:bold;
 	text-transform: uppercase;
 }
     
@@ -156,7 +158,7 @@ nav {
 /* CIRCLE BUTTON */
 
 .circle-button{
-    color: #ccc;
+    color: rgb(40, 40, 40);
 	display: inline-block;
     font-size: 2rem;
     border-radius: 50%;
@@ -212,6 +214,12 @@ nav {
     margin-bottom: 20px;
 }
 
+/* 3D IMAGE THING */
+
+.img3D {
+  cursor: grab;
+}
+
 .img3D:hover {
   animation: lift 0.5s ease-in;
   animation-fill-mode: forwards;
@@ -222,14 +230,24 @@ nav {
   animation-fill-mode: forwards;
 }
 
+.bg-img {
+  position:absolute;
+  transform: translate(-70px, -30px);
+  width:400px;
+  max-width: 400px;
+  z-index:-1;
+}
+
 .big-text {
-  font-size: 4em;
+  font-size: 4.5em;
+  margin-bottom:5px;
 }
 
 /* FOOTER */
 
 footer {
-    background-color: var(--custom-primary);
+    background-color: var(--custom-dark);
+    color: var(--custom-light);
     height: 5em;
     width: 100%;
     
@@ -239,6 +257,7 @@ footer {
 
     outline-style: solid;
     outline-width: 0.1em;
+    outline-color: black;
 }
 
 /* ANIMATIONS */
@@ -251,8 +270,8 @@ footer {
 }
 
 @keyframes dropFloat {
-    0% { transform: translate(-100px,  5px); }
-    100% { transform: translate(-100px,  0px); }
+    0% { transform: translate(-120px,  5px); }
+    100% { transform: translate(-120px,  0px); }
 }
 
 @keyframes hovering {

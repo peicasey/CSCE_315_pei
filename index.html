@@ -31,16 +31,16 @@
       </div>
       <div id="current-page"> LANDING </div>
     </div>
-    <div style="display:flex;">
+    <div style="display:flex; margin-right: 20px; column-gap: 10px;">
       <a href="#" onclick="switchStyle()" class="btn-flip" data-back="style" data-front="change"></a>
       <!-- <button type="button" onclick="switchStyle()">Change Style</button> -->
       <div class="dropdown">
         <a href="#" onclick="switchStyle()" class="btn-flip" data-back="🡱" data-front="🡳"></a>
         <div class="dropdown-options">
-          <a href="#" onclick="return show('Page_landing');">landing</a>
-          <a href="#" onclick="return show('Page_portfolio');">portfolio</a>
-          <a href="#" onclick="return show('Page_qualifications');">qualifications</a>
-          <a href="#" onclick="return show('Page_service');">service</a>
+          <a href="#" onclick="return show('Page_landing');">LANDING</a>
+          <a href="#" onclick="return show('Page_portfolio');">PORTFOLIO</a>
+          <a href="#" onclick="return show('Page_qualifications');">QUALIFICATIONS</a>
+          <a href="#" onclick="return show('Page_service');">SERVICE</a>
         </div>
       </div>
     </div>
@@ -56,9 +56,12 @@
       margin-top: 20px;
       margin-bottom: 40px;"
       >
-        <img class="img3D" src="./assets/casey-spinning.gif" alt="a 3d model of casey">
+        <div style="display: inline;">
+          <img class="bg-img" src="./assets/background.png" alt="background for 3d model of casey">
+          <img class="img3D" src="./assets/casey-spins.gif" alt="a 3d model of casey">
+        </div>
       </div>
-      <div style="display: block; margin-left: 20px; margin-bottom: 50px;">
+      <div style="display: block; margin-left: 10%; margin-bottom: 30px;">
         <div class="info-card">
           <div class="icon-lineup">
             <div class="grow-container">
@@ -90,7 +93,7 @@
         <div>
           <h1 class="big-text">HI, I'M CASEY PEI</h1>
           <div>
-            <p>honors computer science student at texas a&m</p>
+            <p style="text-indent: 20px;">honors computer science student at texas a&m</p>
             <p>craig and galen brown scholar</p>
             <p>projects officer at aggie coding club</p>
             <p>vice-president of the teaching assistant organization</p>
@@ -99,17 +102,19 @@
         </div>
       </div>
   
-      <div>
-        click →  
-        <button>
-          <a href="#" onclick="return show('Page_portfolio');">portfolio</a>
-        </button>
-        <button>
-          <a href="#" onclick="return show('Page_qualifications');">qualifications</a>
-        </button>
-        <button>
-          <a href="#" onclick="return show('Page_service');">service</a>
-        </button>
+      <div style="display:flex; justify-content:flex-start; align-content:center; column-gap: 50px; margin-left: 20%; margin-top:50px; margin-bottom:50px;">
+        <div><strong>click →</strong></div>  
+        <div style="display:flex; justify-content:space-between; column-gap:40px">
+          <div class="grow-container">
+            <a href="#" onclick="return show('Page_portfolio');" class="circle-button"><i class="fa-solid fa-folder-open adjust-circle" aria-hidden="true"></i></a>
+          </div>
+          <div class="grow-container">
+            <a href="#" onclick="return show('Page_qualifications');" class="circle-button"><i class="fa-solid fa-code" style="transform:translate(-4px, -5px)" aria-hidden="true"></i></a>
+          </div>
+          <div class="grow-container">
+            <a href="#" onclick="return show('Page_service');" class="circle-button"><i class="fa-solid fa-handshake-angle" style="transform:translate(-4px, -5px)" aria-hidden="true"></i></a>
+          </div>
+        </div>
       </div>
   
       <div>
