@@ -17,15 +17,20 @@
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-  <link rel="apple-touch-icon" type="image/x-icon" href="./assets/will.ico">
-  <link rel="icon" type="image/x-icon" href="./assets/will.ico">
+  <link rel="apple-touch-icon" type="image/x-icon" href="./assets/logo.ico">
+  <link rel="icon" type="image/x-icon" href="./assets/logo192.png">
   
   <script src="./functions.js"></script>
 
 </head>
 <body>
-  <nav>
-    <div id="current-page"> LANDING </div>
+  <nav style="margin-top: 20px; margin-bottom: 20px;">
+    <div style="display:flex; column-gap: 20px; justify-content: space-between; align-items: center; margin-left: 15px;">
+      <div class="grow-container">
+        <a class="circle-button"><img src="./assets/logo192.png" alt="logo" style="height:1em; width: 1em;"></i></a>
+      </div>
+      <div id="current-page"> LANDING </div>
+    </div>
     <div style="display:flex;">
       <a href="#" onclick="switchStyle()" class="btn-flip" data-back="style" data-front="change"></a>
       <!-- <button type="button" onclick="switchStyle()">Change Style</button> -->
@@ -43,21 +48,33 @@
 
 
   <!-- LANDING  -->
-  <div id='Page_landing' style='display:block'>
+  <div id='Page_landing' style='display:grid; grid-template-columns: 0.5fr 0.8fr; grid-template-rows: 1fr; gap: 0px 0px; '>
 
     <div>
-      <div>
-        cool 3d image thing i will do i swear
+      <div style="display: flex; 
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 40px;"
+      >
+        <img class="img3D" src="./assets/casey-spinning.gif" alt="a 3d model of casey">
       </div>
-      <div class="info-card">
-        <div class="icon-lineup">
-          <div class="grow-container"><a href="https://github.com/peicasey/" class="circle-button"><i class="fa-brands fa-github adjust-circle" aria-hidden="true"></i></a></div>
-          <div class="grow-container"><a href="https://www.linkedin.com/in/casey-pei/" class="circle-button"><i class="fa-brands fa-linkedin-in adjust-circle" aria-hidden="true"></i></a></div>
-          <div class="grow-container"><a class="circle-button"><i class="fa-solid fa-envelope adjust-circle" aria-hidden="true"></i></a></div>
-        </div>
-        <div class="info-lineup">
-          <div>peicasey@gmail.com</div>
-          <div>caseypei@tamu.edu</div>
+      <div style="display: block; margin-left: 20px; margin-bottom: 50px;">
+        <div class="info-card">
+          <div class="icon-lineup">
+            <div class="grow-container">
+              <a href="https://github.com/peicasey/" class="circle-button"><i class="fa-brands fa-github adjust-circle" aria-hidden="true"></i></a>
+            </div>
+            <div class="grow-container">
+              <a href="https://www.linkedin.com/in/casey-pei/" class="circle-button"><i class="fa-brands fa-linkedin-in adjust-circle" aria-hidden="true"></i></a>
+            </div>
+            <div class="grow-container">
+              <a class="circle-button"><i class="fa-solid fa-envelope adjust-circle" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="info-lineup">
+            <div>peicasey@gmail.com</div>
+            <div>caseypei@tamu.edu</div>
+          </div>
         </div>
       </div>
       <div>
@@ -70,39 +87,41 @@
 
     <div>
       <div>
-        <h1>HI, I'M CASEY PEI</h1>
         <div>
-          <p>honors computer science student at texas a&m</p>
-          <p>craig and galen brown scholar</p>
-          <p>projects officer at aggie coding club</p>
-          <p>vice-president of the teaching assistant organization</p>
-          <p>biostatistics research assistant</p>
+          <h1 class="big-text">HI, I'M CASEY PEI</h1>
+          <div>
+            <p>honors computer science student at texas a&m</p>
+            <p>craig and galen brown scholar</p>
+            <p>projects officer at aggie coding club</p>
+            <p>vice-president of the teaching assistant organization</p>
+            <p>biostatistics research assistant</p>
+          </div>
         </div>
       </div>
+  
+      <div>
+        click →  
+        <button>
+          <a href="#" onclick="return show('Page_portfolio');">portfolio</a>
+        </button>
+        <button>
+          <a href="#" onclick="return show('Page_qualifications');">qualifications</a>
+        </button>
+        <button>
+          <a href="#" onclick="return show('Page_service');">service</a>
+        </button>
+      </div>
+  
+      <div>
+        <h2>ABOUT ME</h2>
+        <p>
+          insert a paragraph about myself. maybe i'll get that from my linkedin TT
+        </p>
+      </div>
+  
+      <button type="button" onclick="button1()">Increment</button>
+      <p id="output"></p>
     </div>
-
-    <div>
-      click -->
-      <button>
-        <a href="#" onclick="return show('Page_portfolio');">portfolio</a>
-      </button>
-      <button>
-        <a href="#" onclick="return show('Page_qualifications');">qualifications</a>
-      </button>
-      <button>
-        <a href="#" onclick="return show('Page_service');">service</a>
-      </button>
-    </div>
-
-    <div>
-      <h2>ABOUT ME</h2>
-      <p>
-        insert a paragraph about myself. maybe i'll get that from my linkedin TT
-      </p>
-    </div>
-
-    <button type="button" onclick="button1()">Increment</button>
-    <p id="output"></p>
   </div>
     
   <!-- PORTFOLIO -->

@@ -179,7 +179,7 @@ nav {
 /* INFORMATION CARD */
 
 .info-card {
-    position: sticky;
+    position: fixed;
     position: -webkit-sticky;
     
     display: flex;
@@ -193,8 +193,8 @@ nav {
 
     outline-style: solid;
     outline-width: 0.1em;
-    height: 10%;
-    width: 30%;
+    height: 20%;
+    width: 25%;
     background-color: white;
 }
 
@@ -204,11 +204,26 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .info-lineup {
     padding: 5px; 
     margin-bottom: 20px;
+}
+
+.img3D:hover {
+  animation: lift 0.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.img3D:hover::after {  
+  animation: drop 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.big-text {
+  font-size: 4em;
 }
 
 /* FOOTER */
@@ -262,4 +277,14 @@ footer {
 		    padding: 0.25em;
 		    margin: -0.25em; 
 	    }
+}
+
+@keyframes lift {
+  0% { transform: translate(0px,  0px); }
+  100% { transform: translate(0px,  -10px); }
+}
+
+@keyframes drop {
+  0% { transform: translate(0px,  -10px); }
+  100% { transform: translate(0px,  0px); }
 }
