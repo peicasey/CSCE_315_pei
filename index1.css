@@ -1,3 +1,9 @@
+* {
+    outline:none;
+    text-decoration:none;
+    border:none;
+  }
+
 :root {
     --custom-primary: #FED049;
     --custom-light: #CFFDE1;
@@ -5,6 +11,7 @@
     --custom-dark: #3D5656;
     --speed: 0.5s;
     font-family: 'Open Sans', sans-serif;
+    background-color: rgb(243, 243, 243);
 }
 
 nav {
@@ -19,7 +26,7 @@ nav {
     color: black;
     
     outline-style: solid;
-    outline-width: 0.1em;
+    outline-width: 0.15em;
     
     font-size: small;
     font-weight:bold;
@@ -33,10 +40,12 @@ nav {
     
 }
 
+/* based off of: Joel Olawanle  */
+
 .dropdown {
     display: inline-block;
     position: relative;
-  }
+}
   
   button{
     border:none;
@@ -47,7 +56,9 @@ nav {
   }
   
   button:hover{
-    background-color:#ddd;
+    animation: buttonHovering;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
   }
   
   .dropdown-options {
@@ -61,6 +72,9 @@ nav {
   
   .dropdown:hover .dropdown-options {
     display: block;
+    animation: fadeIn 0.5s;
+    animation: dropFloat 0.5s;
+    animation-fill-mode: forwards;
   }
   
   .dropdown-options a {
@@ -73,10 +87,13 @@ nav {
   
   .dropdown-options a:hover {
     color: #0a0a23;
-    background-color: #ddd;
+    animation: hovering;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
     border-radius:5px;
   }
   
+/* original: Alex Moore */
 
 .btn-flip{
 	opacity: 1;
@@ -115,6 +132,8 @@ nav {
     background: #ffe38d;
     content: attr(data-back);
     transform: translateY(-50%) rotateX(90deg);
+    outline-style: solid;
+    outline-width: 0.1em;
 }
 	
 .btn-flip:before{
@@ -130,6 +149,117 @@ nav {
     background: var(--custom-primary);
     content: attr(data-front);
     transform: translateY(0) rotateX(0);
+    outline-style: solid;
+    outline-width: 0.1em;
 }
 
+/* CIRCLE BUTTON */
 
+.circle-button{
+    color: #ccc;
+	display: inline-block;
+    font-size: 2rem;
+    border-radius: 50%;
+	transition: all 0.2s;
+
+    height:1em;
+    width:1em;
+  }
+  
+  .circle-button:hover{
+    animation: circle-anim 0.3s ease forwards;
+    transition: all 0.4s ease;
+    background: var(--custom-secondary);
+  }
+
+  .adjust-circle {
+    transform: translateY(-5px);
+  }
+
+/* INFORMATION CARD */
+
+.info-card {
+    position: sticky;
+    position: -webkit-sticky;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+
+    font-style: italic;
+    font-weight:100;
+    text-align: center;
+
+    outline-style: solid;
+    outline-width: 0.1em;
+    height: 10%;
+    width: 30%;
+    background-color: white;
+}
+
+.icon-lineup {
+    width: 50%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.info-lineup {
+    padding: 5px; 
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--custom-primary);
+    height: 5em;
+    width: 100%;
+    
+    display:flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+
+    outline-style: solid;
+    outline-width: 0.1em;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    25% { opacity: 0.2; }
+    75% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes dropFloat {
+    0% { transform: translate(-100px,  5px); }
+    100% { transform: translate(-100px,  0px); }
+}
+
+@keyframes hovering {
+    0% { background-color: white; }
+    100% { background-color: #ddd; }
+}
+
+@keyframes buttonHovering {
+    0% { background-color: #ddd; }
+    100% { background-color: rgb(176, 176, 176) }
+}
+
+@keyframes circle-anim{
+	0%  {	}
+	
+	90% {	
+            padding: 0.35em;
+            margin: -0.35em; 
+	    }  
+	
+	100% {
+		    padding: 0.25em;
+		    margin: -0.25em; 
+	    }
+}

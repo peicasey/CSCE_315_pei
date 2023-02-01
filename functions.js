@@ -19,6 +19,7 @@ function show(shown) {
     for (let i=0; i<pages.length; i++){
         if (shown == pages[i]) {
             document.getElementById(shown).style.display='block';
+            document.getElementById('current-page').innerHTML = shown.substring(5, shown.length).toUpperCase();
         }
         else {
             document.getElementById(pages[i]).style.display='none';
@@ -33,11 +34,6 @@ function switchStyle() {
     const elem = document.getElementById('whichStyle');
     elem.setAttribute('href',  isStyle1 ? './index2.css' : './index1.css');
     isStyle1 = !isStyle1;
-}
-
-// set current page
-function setCurrentPage(page) {
-    document.getElementById('current-page').innerHTML = page;
 }
 
 // increment button for fun
