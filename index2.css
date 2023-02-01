@@ -1,21 +1,121 @@
-.blue_overline_text {
-    color:rgb(8, 173, 60)
+:root {
+    --custom-primary: #1d9928;
+    --custom-light: #CFFDE1;
+    --custom-secondary: #68B984;
+    --custom-dark: #3D5656;
+    --speed: 0.5s;
+    font-family: 'Open Sans', sans-serif;
 }
 
-#red_underline_text {
-    color:rgb(210, 24, 191)
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 2em;
+    align-items: center;
 }
 
-/* pages */
-/* #Page_landing {}
+#current-page {
+    background-color: var(--custom-primary);
+    color: black;
+}
 
-#Page_portfolio {}
+.dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  button{
+    border:none;
+    border-radius:5px;
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+  }
+  
+  button:hover{
+    background-color:#ddd;
+  }
+  
+  .dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color:#fff;
+    border-radius:5px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  
+  .dropdown:hover .dropdown-options {
+    display: block;
+  }
+  
+  .dropdown-options a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    padding:20px 40px;
+  }
+  
+  .dropdown-options a:hover {
+    color: #0a0a23;
+    background-color: #ddd;
+    border-radius:5px;
+  }
+  
 
-#Page_qualifications {}
+.btn-flip{
+	opacity: 1;
+	outline: 0;
+	color: #fff;
+	line-height: 40px;
+	position: relative;
+	text-align: center;
+	letter-spacing: 1px;
+	display: inline-block;
+	text-decoration: none;
+	font-family: 'Open Sans';
+	text-transform: uppercase;
+}
+    
+.btn-flip:hover:after{
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+		
+.btn-flip:hover:before{
+    opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
+}
+	
+	
+.btn-flip:after{
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #323237;
+    display: block;
+    transition: var(--speed);
+    position: absolute;
+    background: #adadaf;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+}
+	
+.btn-flip:before{
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: #adadaf;
+    display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    transition: var(--speed);
+    position: relative;
+    background: #323237;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+}
 
-#Page_service {}
 
-#Page_ai {} */
-
-/* style */
-/* #whichStyle {} */

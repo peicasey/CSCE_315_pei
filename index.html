@@ -15,6 +15,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,800&display=swap');
   </style> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
   <link rel="apple-touch-icon" type="image/x-icon" href="./assets/will.ico">
   <link rel="icon" type="image/x-icon" href="./assets/will.ico">
@@ -24,23 +25,19 @@
 </head>
 <body>
   <nav>
-    --navbar--
-    <div id="current-page">[ current page ]</div>
-    <button type="button" onclick="switchStyle()">Change Style</button>
-    <div id="dropdown">
-      [ = ]
-      <button>
-        <a href="#" onclick="return show('Page_landing');">landing</a>
-      </button>
-      <button>
-        <a href="#" onclick="return show('Page_portfolio');">portfolio</a>
-      </button>
-      <button>
-        <a href="#" onclick="return show('Page_qualifications');">qualifications</a>
-      </button>
-      <button>
-        <a href="#" onclick="return show('Page_service');">service</a>
-      </button>
+    <div id="current-page"> LANDING </div>
+    <div style="display:flex;">
+      <a href="#" onclick="switchStyle()" class="btn-flip" data-back="style" data-front="change"></a>
+      <!-- <button type="button" onclick="switchStyle()">Change Style</button> -->
+      <div class="dropdown">
+        <a href="#" onclick="switchStyle()" class="btn-flip" data-back="🡱" data-front="🡳"></a>
+        <div class="dropdown-options">
+          <a href="#" onclick="return show('Page_landing'); return setCurrentPage(' LANDING ');">landing</a>
+          <a href="#" onclick="return show('Page_portfolio'); return setCurrentPage(' PORTFOLIO ');">portfolio</a>
+          <a href="#" onclick="return show('Page_qualifications'); return setCurrentPage(' QUALIFICATIONS ');">qualifications</a>
+          <a href="#" onclick="return show('Page_service'); return setCurrentPage(' SERVICE ');">service</a>
+        </div>
+      </div>
     </div>
   </nav>
 

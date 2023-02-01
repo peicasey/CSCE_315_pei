@@ -12,6 +12,7 @@
 let n = 0
 let isStyle1 = 1;
 const pages = ['Page_landing', 'Page_portfolio', 'Page_qualifications', 'Page_service', 'Page_ai'];
+//const page_names = [' LANDING ', ' PORTFOLIO ', ' QUALIFICATIONS ', ' SERVICE ', ' AI '];
 
 // page controller
 function show(shown) {
@@ -34,7 +35,12 @@ function switchStyle() {
     isStyle1 = !isStyle1;
 }
 
+// set current page
+function setCurrentPage(page) {
+    document.getElementById('current-page').innerHTML = page;
+}
+
 // increment button for fun
 function button1() {
-    document.getElementById('output').innerHTML = ++n;
+    document.getElementById('output').innerHTML = n+2;
 }
