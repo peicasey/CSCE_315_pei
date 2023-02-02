@@ -343,39 +343,39 @@ font-size: small;
 /* TECH STACK */
 
 .tech_box {
-background-color: var(--custom-dark);
-color: var(--custom-light);
+  background-color: var(--custom-dark);
+  color: var(--custom-light);
 
-padding: 2px;
-margin-bottom: 30px;
+  padding: 2px;
+  margin-bottom: 30px;
 
-outline-style: solid;
-outline-width: 0.1em;
-outline-color: black;
+  outline-style: solid;
+  outline-width: 0.1em;
+  outline-color: black;
 }
 
 .tech_stack {
-display:flex; 
-justify-content: space-between;
-align-items: center;
+  display:flex; 
+  justify-content: space-between;
+  align-items: center;
 
-margin-top: 0px;
-margin-left: 20px;
-margin-right: 20px;
-margin-bottom: 20px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 
-height: 25px;
+  height: 25px;
 }
 
 .tech_item {
-font-size: medium;
-transition: font-size 0.5s ease-out;
+  font-size: medium;
+  color: var(--custom-light);
+  transition: font-size 0.5s ease-out;
 }
 
 .tech_item:hover {
-/* animation: viewBigger 0.1s ease-out;
-animation-fill-mode: forwards; */
-font-size: xx-large;
+  color: white;
+  font-size: xx-large;
 }
 
 /* FOOTER */
