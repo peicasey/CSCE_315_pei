@@ -29,7 +29,7 @@
   <nav style="margin-top: 20px; margin-bottom: 20px;">
     <div style="display:flex; column-gap: 20px; justify-content: space-between; align-items: center; margin-left: 15px;">
       <div class="grow-container">
-        <a onclick="return show('Page_landing');"  class="circle-button"><img src="./assets/logo192.png" alt="logo" style="height:1em; width: 1em;"></i></a>
+        <a onclick="return show('Page_landing');" class="circle-button"><img src="./assets/logo192.png" alt="logo" style="height:1em; width: 1em;"></i></a>
       </div>
       <div id="current-page">LANDING</div>
     </div>
@@ -74,10 +74,10 @@
               <a href="https://www.linkedin.com/in/casey-pei/" class="circle-button"><i class="fa-brands fa-linkedin-in adjust-circle" aria-hidden="true"></i></a>
             </div>
             <div class="grow-container">
-              <a class="circle-button"><i class="fa-solid fa-envelope adjust-circle" aria-hidden="true"></i></a>
+              <a href="mailto:peicasey@gmail.com" class="circle-button"><i class="fa-solid fa-envelope adjust-circle" aria-hidden="true"></i></a>
             </div>
           </div>
-          <div class="info-lineup">
+          <div class="info-lineup" style="margin-top: 10px;">
             <div>peicasey@gmail.com</div>
             <div>caseypei@tamu.edu</div>
           </div>
@@ -102,7 +102,7 @@
             <p class="emphasize">honors computer science student at texas a&m</p>
             <p class="emphasize">craig and galen brown scholar</p>
             <p class="emphasize">projects chair at aggie coding club</p>
-            <p class="emphasize">vice-president of the teaching assistant organization</p>
+            <p class="emphasize">vice-president of the engineering teaching assistant organization</p>
             <p class="emphasize">biostatistics research assistant</p>
           </div>
         </div>
@@ -186,8 +186,8 @@
     <div style="display:grid; grid-template-columns: 0.5fr 0.8fr; grid-template-rows: 1fr; gap: 0px 0px;  margin-left: 40px; margin-right: 40px; margin-bottom: 40px;">
       <div>
         <div>
-          <div style="display:flex; justify-content: space-between; align-content:center; margin-left:10%; margin-right:30%; margin-bottom: 10%; margin-top: 10%;">
-            click to download →
+          <div style="display:flex; justify-content: space-between; align-content:center; margin-left:10%; margin-right:30%; margin-bottom: 5%; margin-top: 10%;">
+            <div>click to download →</div>
             <a href="./assets/Casey Pei - Resume.pdf" download="Casey Pei - Resume" class="btn-flip" data-back="✔" data-front="⭳"></a>
           </div>
           <div>
@@ -195,17 +195,20 @@
             </iframe>
           </div>
         </div>
-        <div style="display:block; z-index: 9999; margin-right: 10%; margin-top:80%;">
-          <div class="info-card">
-            <div class="icon-lineup">
-              <div class="grow-container">
+        <div style="margin-left: 30%;">
+          My resume! ⮥
+        </div>
+        <div>
+          <div class="static-info-card">
+            <div style="display:flex; gap: 20px; margin-top: 30px;">
+              <div class="grow-container" style="height:1em">
                 <a href="https://www.linkedin.com/in/casey-pei/" class="circle-button"><i class="fa-brands fa-linkedin-in adjust-circle" aria-hidden="true"></i></a>
               </div>
               <div class="grow-container">
                 <a class="circle-button"><i class="fa-solid fa-envelope adjust-circle" aria-hidden="true"></i></a>
               </div>
             </div>
-            <div class="info-lineup">
+            <div class="info-lineup" >
               <div>peicasey@gmail.com</div>
               <div>caseypei@tamu.edu</div>
             </div>
@@ -322,64 +325,19 @@
 
   <!-- SERVICE -->
   <div id='Page_service' style="display:none">
-    <div>
-      <div>
+    <div style="margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 5%;">
+      <div style="display:flex; margin-bottom: 5%;">
         <div>
           <h1>LEADERSHIP AND SERVICE</h1>
-          <p>blurb about how service is important and stuff</p>
+          <p style="font-size: x-large; font-style: italic; color:var(--custom-dark)">Compassion: that's the one thing no machine ever had. Maybe it's the one thing that keeps men ahead of them.</p>
+          <p style="font-size: large; font-style: italic; color:var(--custom-dark)">- Dr. Leonard H. "Bones" McCoy</p>
         </div>
-        <div>
-          link to the ai page
-          <button>
-            <a href="#" onclick="return show('Page_ai');">ai</a>
-          </button>
-        </div>
+        <!-- <div style="margin-top: 20px;">
+          <img src="./assets/logo192.png" height="100px" class="img-hover">
+        </div> -->
       </div>
-      <div>
-        <div>
-          <div>
-            ACC image + link to ACC
-            <img>
-          </div>
-          <div>
-            <h3>AGGIE CODING CLUB - projects chair</h3>
-            <p>2021-present</p>
-            <p>blurb about aggie coding club from resume</p>
-          </div>
-        </div>
-        <div>
-          <div>
-            TAO image + link to TAO
-            <img>
-          </div>
-          <div>
-            <h3>TEACHING ASSISTANT ORGANIZATION - vice-president</h3>
-            <p>2023-present</p>
-            <p>blurb about tao from resume</p>
-          </div>
-        </div>
-        <div>
-          <div>
-            tagd image + link to tagd
-            <img>
-          </div>
-          <div>
-            <h3>TEXAS A&M GAME DEVELOPERS - member</h3>
-            <p>2021-present</p>
-            <p>blurb about tagd from resume</p>
-          </div>
-        </div>
-        <div>
-          <div>
-            datathon + datathon link
-            <img>
-          </div>
-          <div>
-            <h3>TAMU DATATHON - volunteer</h3>
-            <p>2021</p>
-            <p>blurb about volunteering at datathon</p>
-          </div>
-        </div>
+      <div id="service">
+        code will autofill this
       </div>
     </div>
   </div>
