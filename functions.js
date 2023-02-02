@@ -12,7 +12,17 @@
 let n = 0
 let isStyle1 = 1;
 const pages = ['Page_landing', 'Page_portfolio', 'Page_qualifications', 'Page_service', 'Page_ai'];
-const page_names = [' LANDING ', ' PORTFOLIO ', ' QUALIFICATIONS ', ' SERVICE ', ' AI '];
+const social_icons = {
+    "github": "<i class='fa-brands fa-github adjust-circle' aria-hidden='true'>",
+    "itch.io": "<i class='fa-brands fa-itch-io adjust-circle' aria-hidden='true'>",
+    "devpost": "<img src='./assets/devpost-icon.png' alt='devpost logo' style='width:1em; height:1em;'>",
+  };
+
+  const language_icons = {
+    "github": "<i class='fa-brands fa-github adjust-circle' aria-hidden='true'>",
+    "itch.io": "<i class='fa-brands fa-itch-io adjust-circle' aria-hidden='true'>",
+    "devpost": "<img src='./assets/devpost-icon.png' alt='devpost logo' style='width:1em; height:1em;'>",
+  };
 
 // page controller
 function show(shown) {
@@ -56,29 +66,32 @@ function switchStyle() {
 // projectts generator
 const PROJECTS = [{
     "name": "TIME LEAP",
-    "location": "New york",
-    "meals": 5,
-    "close_time": '23:30',
+    "language": "unity c# git",
+    "tags": "game 2D",
+    "description": 'Winner of Best in Programming (TAGD Fall 21)',
     "image": "TimeLeap.png"
 },{
     "name": "CARRYON",
-    "location": "San francisco",
-    "meals": 15,
-    "close_time": '22:00',
+    "language": "react html/css/jsx azure python",
+    "tags": "webdev hackathon",
+    "description": 'TAMUHack 23',
     "image": "CarryOn.jpg"
 },{
     "name": "GRAPPLING WITH SCHOOL",
-    "location": "New york",
-    "meals": 8,
-    "close_time": '23:00',
+    "language": "unit c# git",
+    "tags": "game 2D",
+    "description": 'Winner of Best in Design and 1st Overall (TAGD Spring 22)',
     "image": "GWS.png"
 }];
 
 const TPL_Results = item => `<div class="project-item">
   <h3 class="Results-itemName">${item.name}</h3>
   <img style="width:100%; height:auto object-fit: cover;" src="./assets/project_images/${item.image}">
-  <p class="Results-itemLocation"><b>${item.location}</b></p>
-  <p class="Results-itemDetails">Meals: ${item.meals} Close time: ${item.close_time}</p>
+  <div style='padding: 5px;'>
+    <p class="Results-itemLanguage"><b>Tech: ${item.language}</b></p>
+    <p class="Results-itemTags">Fields: ${item.tags}</p>
+    <p class="Results-itemDesc">${item.description}</p>
+  </div>
 </div>`;
 
 function generateProjects () {

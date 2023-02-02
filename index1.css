@@ -313,10 +313,21 @@ nav {
   background: white;
 
   text-align: center;
-
+  
   outline-style: solid;
   outline-width: 0.1em;
   outline-color: black;
+}
+
+.project-item:hover {
+  animation: lift 0.5s ease-in;
+  animation-fill-mode: forwards;
+  box-shadow: 0px 10px 10px 0px rgba(109, 109, 109, 0.4);
+}
+
+.Results-itemDesc {
+  color: var(--custom-dark);
+  font-size: small;
 }
 
 
