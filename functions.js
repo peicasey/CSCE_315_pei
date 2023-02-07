@@ -62,10 +62,21 @@ function show(shown) {
 
 // style controller
 function switchStyle() {
-    const elem = document.getElementById('whichStyle');
-    elem.setAttribute('href',  isStyle1 ? './index2.css' : './index1.css');
-    isStyle1 = !isStyle1;
+  localStorage.setItem("page_stylesheet_name", isStyle1 ? './style1.css' : './style2.css');
+  load_style();
+
+  isStyle1 = !isStyle1;
 }
+
+function load_style() {
+  page_style = localStorage.getItem("page_stylesheet_name");
+  if (page_style === null) {
+    page_style = "./style1.css";
+  }
+  document.getElementById('whichStyle').setAttribute("href", page_style);
+}
+
+load_style() // load style immediately
 
 // projectts generator
 const PROJECTS = [{
