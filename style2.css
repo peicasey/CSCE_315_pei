@@ -4,7 +4,7 @@
     --custom-primary: #35f4ce;
     --custom-light: #efe8ff;
     --custom-secondary: #c65dfa;
-    --custom-dark: #4b12bc;
+    --custom-dark: #915ff5;
     --speed: 0.5s;
     font-family: 'Raleway', sans-serif;
 }
@@ -410,13 +410,34 @@ button{
     display: none;
   }
 
+  .qualifications-layout {
+    display: block;
+    text-align: center;
+  }
+
+  .resume-section {
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
   .resume-download-area {
     display:flex; 
     justify-content: space-between; 
     align-content:center; 
-    margin-left:10%; 
-    margin-right:30%; 
+
+    margin-left:20%; 
+    margin-right:20%; 
     margin-bottom: 5%; 
+    margin-top: 10%;
+  }
+
+  .pseudo-resume-section {
+    text-align: left;
+
+    margin-left: 10%; 
+    margin-right: 10%; 
+    margin-bottom: 10%; 
     margin-top: 10%;
   }
 
@@ -426,6 +447,35 @@ button{
     margin-top: 30px;
   }
 
+  .static-info-card {
+    margin-top: 10%; 
+
+    font-size: 2em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+  
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+
+    padding-bottom: 20px;
+  
+    height: 10%;
+
+    color: var(--custom-light);
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .resume-category {
+    margin-bottom: 5%;
+    padding: 2%;
+
+    color: var(--custom-light);
+    background-color: rgba(0,0,0,0.4);
+  }
 
   .tech_box {
     background-color: rgba(0,0,0,0.4);
@@ -433,6 +483,7 @@ button{
   
     padding: 2px;
     margin-bottom: 30px;
+    padding-left: 20px;
   
     outline-style: solid;
     outline-width: 0.1em;
@@ -480,6 +531,12 @@ button{
   .service-item:hover {
     background: rgba(0,0,0,0.6);
     transform: translate(0px, -5px);
+  }
+
+  .quote-credit {
+    font-size: large; 
+    font-style: italic; 
+    margin-bottom: 5%;
   }
 
   #Page_ai {
