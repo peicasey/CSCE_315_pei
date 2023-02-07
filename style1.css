@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 * {
   outline:none;
   text-decoration:none;
@@ -11,7 +13,6 @@
   --custom-dark: #3D5656;
   --speed: 0.5s;
   font-family: 'Open Sans', sans-serif;
-  background-color: rgb(243, 243, 243);
 
   background: linear-gradient(-45deg, #cccccc, #edeeef, #dee0e2, #d5d7d8);
   background-size: 400% 400%;
@@ -22,12 +23,13 @@
   background-size: cover;
 }
 
-
+.space {
+  display: hidden;
+}
 
 nav {
   margin-top: 20px; 
   margin-bottom: 20px;
-  
 
   display: flex;
   justify-content: space-between;
@@ -106,6 +108,10 @@ nav {
   margin-left:40px; 
   margin-right:60px; 
   margin-bottom: 100px;
+}
+
+.display_inline {
+  display: inline;
 }
 
 #Page_portfolio {
