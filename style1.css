@@ -97,6 +97,7 @@ nav {
 .quick-icons {
   display:flex; 
   justify-content:space-between; 
+  align-items: center;
   column-gap:40px;
 }
 
@@ -112,6 +113,13 @@ nav {
 
 .display_inline {
   display: inline;
+}
+
+.various-titles {
+  white-space: nowrap; 
+  line-height: 0.8; 
+  text-indent: 40px; 
+  color:var(--custom-dark);
 }
 
 #Page_portfolio {
@@ -143,12 +151,12 @@ nav {
 }
 
 .qualifications-layout {
-  display:grid; 
-  grid-template-columns: 0.5fr 0.8fr; 
-  grid-template-rows: 1fr; gap: 0px 0px;  
-  margin-left: 40px; 
-  margin-right: 40px; 
-  margin-bottom: 40px;
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 10%;
 }
 
 .resume-download-area {
@@ -181,13 +189,6 @@ nav {
 
 #Page_service {
   display: none;
-}
-
-.service-layout {
-  margin-left: 5%; 
-  margin-right: 5%; 
-  margin-top: 5%; 
-  margin-bottom: 5%;
 }
 
 .quote-box {

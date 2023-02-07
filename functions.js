@@ -31,7 +31,10 @@ function show(shown) {
         if (shown == pages[i]) {
             switch (pages[i]) {
                 case 'Page_landing':
+                  if (page_style == "./style1.css") {
                     document.getElementById(shown).style = "display:grid; grid-template-columns: 0.5fr 0.8fr; grid-template-rows: 1fr; gap: 0px 0px;";
+                  }
+                  else { document.getElementById(shown).style = 'display:block';  }
                   break;
                 case 'Page_portfolio':
                     generateProjects();
@@ -64,7 +67,7 @@ function show(shown) {
 function switchStyle() {
   localStorage.setItem("page_stylesheet_name", isStyle1 ? './style1.css' : './style2.css');
   load_style();
-
+  show('Page_landing')
   isStyle1 = !isStyle1;
 }
 
