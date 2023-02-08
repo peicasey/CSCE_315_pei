@@ -23,6 +23,10 @@ body {
   color: white;
 }
 
+.margin_top {
+  margin-top: 10px;
+}
+
 .bg-img {
   display: none;
 }

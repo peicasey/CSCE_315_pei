@@ -460,6 +460,10 @@ position:fixed;
     background-color: white;
   }
 
+.margin_top {
+  margin-top: 10px;
+}
+
 /* 3D IMAGE THING */
 
 .img3D {
