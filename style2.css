@@ -23,6 +23,14 @@ body {
   color: white;
 }
 
+.devpost {
+  width:1em; height:1em;
+}
+
+.ai-easteregg {
+  text-align: center; margin-top: 20%; margin-right: 10%; margin-bottom: 20%;
+}
+
 .margin_top {
   margin-top: 10px;
 }
