@@ -567,33 +567,46 @@ button{
     display: none;
     position: absolute;
     overflow: auto;
-    background-color:#fff;
+    background-color:rgba(0,0,0,0.8);
     border-radius:5px;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
   }
   
   .dropdown:hover .dropdown-options {
+    z-index: 99;
     display: block;
+    animation: fadeIn 0.5s;
+    animation: slideIn 0.5s;
+    animation-fill-mode: forwards;
   }
   
   .dropdown-options a {
     display: block;
-    color: #000000;
-    padding: 5px;
+    color: var(--custom-light);
+    padding: 10px;
+    font-size: xx-large;
     text-decoration: none;
-    padding:20px 40px;
+    padding: 45px 60px;
+    transition: 0.5s;
   }
   
   .dropdown-options a:hover {
-    color: #0a0a23;
-    background-color: #ddd;
+    color: var(--custom-secondary);
+    transform: translate(-10px, 0px);
+    
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
     border-radius:5px;
+    outline-width: 0.1em;
+  }
+
+  @keyframes slideIn {
+    0% { transform: translate(0px,  0px); }
+    100% { transform: translate(-260px,  0px); }
   }
   
 
 .btn-flip{
-	opacity: 1;
-	outline: 0;
+  background-color: rgba(0,0,0,0.4);
 	color: #fff;
 	line-height: 40px;
 	position: relative;
@@ -601,18 +614,18 @@ button{
 	letter-spacing: 1px;
 	display: inline-block;
 	text-decoration: none;
-	font-family: 'Open Sans';
+	font-family: 'Raleway';
 	text-transform: uppercase;
 }
     
 .btn-flip:hover:after{
     opacity: 1;
-    transform: translateY(0) rotateX(0);
+    transform: rotateX(0);
 }
 		
 .btn-flip:hover:before{
     opacity: 0;
-    transform: translateY(50%) rotateX(90deg);
+    transform: rotateX(90deg);
 }
 	
 	
@@ -621,28 +634,27 @@ button{
     left: 0;
     opacity: 0;
     width: 100%;
-    color: #323237;
+    color: var(--custom-primary);
     display: block;
     transition: var(--speed);
     position: absolute;
-    background: #adadaf;
+
     content: attr(data-back);
-    transform: translateY(-50%) rotateX(90deg);
+    transform: rotateX(90deg);
 }
 	
 .btn-flip:before{
     top: 0;
     left: 0;
     opacity: 1;
-    color: #adadaf;
+    color: var(--custom-light);
     display: block;
     padding: 0 30px;
     line-height: 40px;
     transition: var(--speed);
     position: relative;
-    background: #323237;
     content: attr(data-front);
-    transform: translateY(0) rotateX(0);
+    transform: rotateX(0);
 }
 
 

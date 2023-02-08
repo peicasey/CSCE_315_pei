@@ -47,6 +47,10 @@ nav {
   align-items: center; 
 }
 
+.ai-option {
+  display: none;
+}
+
 .nav-status {
   height: 1em; 
   width: 1em;
@@ -189,6 +193,13 @@ nav {
 
 #Page_service {
   display: none;
+}
+
+.service-layout {
+  margin-left: 5%; 
+  margin-right: 5%; 
+  margin-top: 5%; 
+  margin-bottom: 10%;
 }
 
 .quote-box {
