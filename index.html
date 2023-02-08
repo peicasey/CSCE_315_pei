@@ -18,6 +18,149 @@
   
   <script src="./functions.js"></script>
 
+  <!-- TECHNICALLY THIS IS STRUCTURAL BECAUSE IT GENERATES THE CONTENT FOR THE PORTFOLIO AND SERVICE SECTIONS -->
+  <script>
+    // page controller
+    const pages = ['Page_landing', 'Page_portfolio', 'Page_qualifications', 'Page_service', 'Page_ai'];
+
+    function show(shown) {
+        for (let i=0; i<pages.length; i++){
+            console.log("we find that shown == pages[i] is " + shown == pages[i]);
+            if (shown == pages[i]) {
+                switch (pages[i]) {
+                    case 'Page_landing':
+                      if (page_style == "./style1.css") {
+                        document.getElementById(shown).style = "display:grid; grid-template-columns: 0.5fr 0.8fr; grid-template-rows: 1fr; gap: 0px 0px;";
+                      }
+                      else { document.getElementById(shown).style = 'display:block';  }
+                      break;
+                    case 'Page_portfolio':
+                        generateProjects();
+                        document.getElementById(shown).style = 'display:block';
+                      break;
+                    case 'Page_service':
+                        generateService();
+                        document.getElementById(shown).style = 'display:block';
+                      break;
+                    default:
+                        document.getElementById(shown).style = 'display:block';
+                  }                        
+                if (pages[i] == 'Page_landing') {
+                }
+                else {  }
+
+                document.getElementById('current-page').innerHTML = shown.substring(5, shown.length).toUpperCase();
+                console.log(pages[i] + " is " + document.getElementById(pages[i]).style.display) + " !!!!!";
+            }
+            else {
+                document.getElementById(pages[i]).style.display = 'none';
+                console.log(pages[i] + " is " + document.getElementById(pages[i]).style.display);
+            }
+        }
+        console.log("---------------------------");
+        return false;
+    }
+
+    // projectts generator
+    const PROJECTS = [{
+        "name": "TIME LEAP",
+        "language": "unity c# git",
+        "tags": "game 2D",
+        "description": 'Winner of Best in Programming (TAGD Fall 21)',
+        "image": "TimeLeap.png",
+        "link": "https://pengso0o.itch.io/time-leap"
+    },{
+        "name": "CARRYON",
+        "language": "react html/css/jsx azure python",
+        "tags": "webdev hackathon",
+        "description": 'TAMUHack 23',
+        "image": "CarryOn.jpg",
+        "link": "https://devpost.com/software/carryon-hg39kz?ref_content=user-portfolio&ref_feature=in_progress"
+    },{
+        "name": "GRAPPLING WITH SCHOOL",
+        "language": "unit c# git",
+        "tags": "game 2D",
+        "description": 'Winner of Best in Design and 1st Overall (TAGD Spring 22)',
+        "image": "GWS.png",
+        "link": "https://pengso0o.itch.io/grapplingwithschool"
+    }];
+
+    const TPL_Results = item => `<div class="project-item">
+      <h3 class="Results-itemName">${item.name}</h3>
+      <img style="width:100%; height:auto object-fit: cover;" src="./assets/project_images/${item.image}">
+      <div style='padding: 5px;'>
+        <p class="Results-itemLanguage"><b>Tech: ${item.language}</b></p>
+        <p class="Results-itemTags">Fields: ${item.tags}</p>
+        <p class="Results-itemDesc">${item.description}</p>
+        <button onclick="window.location.href='${item.link};'">see more!</button>
+      </div>
+    </div>`;
+
+    function generateProjects () {
+        fetch('./data.json')
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+
+        document.getElementById('projects').innerHTML = PROJECTS.map(item => TPL_Results(item)).join('');
+    }
+
+    // projects generator
+    const CLUBS = [{
+      "name": "Aggie Coding Club",
+      "status": "Projects Chair",
+      "dates": "Fall 2022 - present",
+      "description": "Managing the project managers (40+) and project members (450+) of Aggie Coding Club, by giving guidance, answering technical problems, setting up GitHub repositories. <ul> <li>Fall 2022 semester - organized 450+ members into 20+ projects, using a bot connected to the Discord API, of various topics ranging from model rocketry to mobile and web applications.</li> <li>Spring 2022 semester - leading a project of 20+ people using Twitter AP via Python involved with webscraping data, as well as interact with users via DMs and replies, hosting via Heroku by Salesforce.</li> <li>Fall 2021 semester - participated in a project that spliced video clips based off phoneme (auditory phrase) detection with CMUsphinx via Python and Docker.</li></ul>",
+      "image": "acc_steve.png",
+      "link": "https://www.aggiecodingclub.com/"
+    },{
+      "name": "Engineering Teaching Assistant Organization",
+      "status": "Co Vice-President",
+      "dates": "Fall 2022 - present",
+      "description": 'Engineering Teaching Assistant Organization.',
+      "image": "tamu.png",
+      "link": "https://discord.gg/8B5PhjWrfP"
+    },
+    {
+      "name": "Texas A&M Game Developers",
+      "status": "Member",
+      "dates": "Fall 2021 - present",
+      "description": 'Attended presentations from video game industry professionals and workshops. Participated in a semester-long game jam in a team of three peers, where we self-led weekly meetings and made a 2D platforming game in Unity.',
+      "image": "tagd.webp",
+      "link": "https://tagdigda.wixsite.com/gamedev"
+    },{
+      "name": "Datathon",
+      "status": "volunteer",
+      "dates": "Fall 2021",
+      "description": 'A datathon is where you build your analytical skill set and create data-driven solutions in 24 hours. We provide data science lectures, workshops, challenges, prizes, fun activities, swag, food, and more! ',
+      "image": "datathon.svg",
+      "link": "https://tamudatathon.com/"
+    }];
+
+    const Service_Results = item => `<div class="service-item">
+    <div>
+      <img style="width:100px; height:auto object-fit: cover;" src="./assets/service_images/${item.image}">
+    </div>
+    <div style="margin-left:5%;">
+      <h3 style="margin-bottom: 5px;">${item.name} - ${item.status}</h3>
+      <div style="padding: 5px; color:var(--custom-dark)">
+      <p class="Results-itemLanguage"><i>${item.dates}</i></p>
+      <p class="Results-itemTags">${item.description}</p>
+      <button onclick="window.location.href='${item.link};'">🔗</button>
+    </div>
+    </div>
+    </div>`;
+
+    function generateService () {
+      fetch('./data.json')
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+
+
+      document.getElementById('service').innerHTML = CLUBS.map(item => Service_Results(item)).join('');
+    }
+  </script>
+
 </head>
 <body class="bg">
 
@@ -98,11 +241,12 @@
         <div class="pos-intro">
           <h1 class="big-text">HI, I'M CASEY PEI</h1>
           <div class="various-titles">
-            <p class="emphasize">honors computer science student at texas a&m</p>
-            <p class="emphasize">craig and galen brown scholar</p>
-            <p class="emphasize">projects chair at aggie coding club</p>
-            <p class="emphasize">vice-president of the engineering teaching assistant organization</p>
-            <p class="emphasize">biostatistics research assistant</p>
+            <a href="https://engineering.tamu.edu/cse/index.html" class="emphasize">sophomore computer science major at texas a&m</a>
+            <a href="https://engineering.tamu.edu/academics/eh/about/index.html" class="emphasize">honors computer science student at texas a&m</a>
+            <a href="https://brownfound.org/" class="emphasize">craig and galen brown scholar</a>
+            <a href="https://www.aggiecodingclub.com/" class="emphasize">projects chair at aggie coding club</a>
+            <a href="https://discord.gg/8B5PhjWrfP" class="emphasize">vice-president of the engineering teaching assistant organization</a>
+            <a href="https://ibt.tamu.edu/faculty/kurt-zhang.html" class="emphasize">biostatistics research assistant</a>
           </div>
         </div>
       </div>
@@ -265,31 +409,33 @@
         </div>
         <div class="resume-category">
           <h2>WORK EXPERIENCE</h2>
-          <div>
-            <h3>ARBIN INSTRUMENTS - blabal</h3>
+          <div class="group_section ">
+            <h3>SOFTWARE ENGINEER INTERN - ARBIN INSTRUMENTS</h3>
             <p>2023 summer</p>
-            <p>description of what i did and such</p>
+            <p>To be completed; 12 week paid internship at Arbin Instruments.</p>
           </div>
-          <div>
-            <h3>BIOSTATISTICS RESEARCH ASSISTANT - blabal</h3>
+          <div class="group_section ">
+            <h3>BIOSTATISTICS RESEARCH ASSISTANT - Texas A&M</h3>
             <p>2022-2023 dates</p>
-            <p>description of what i did and such</p>
+            <p>Worked with biomedical research team via application of bioinformatics to develop Python, C++ and R codes and machine learning
+              algorithms in support of genomics research. Presented work on detecting methylation patterns of 68 million DNA reads for
+              preliminary research in early breast cancer detection.</p>
           </div>
-          <div>
-            <h3>HAMILL RESEARCH INTERN - blabal</h3>
+          <div class="group_section ">
+            <h3>HAMILL RESEARCH INTERN - Institute of Biosciences and Technology</h3>
             <p>2022 summer</p>
-            <p>description of what i did and such</p>
+            <p>In addition to working in specific research labs, I observed lectures of the graduate course “Foundations of Clinical and Research Sciences” and had opportunities to attend scientific seminars. At the end of the program, I participated in a Research Day poster presentation where I presented my research project to faculty and trainees.</p>
           </div>
         </div>
         <div class="resume-category">
           <h2>EDUCATION</h2>
-          <div>
+          <div class="group_section">
             <h3>TEXAS A&M UNIVERSITY</h3>
             <p>August 2021 to May 2025</p>
             <p>BS in Computer Science, minoring in Statistics</p>
             <p>Engineering Honors, Craig and Galen Brown Scholar</p>
           </div>
-          <div>
+          <div class="group_section">
             <h3>LA CUEVA HIGH SCHOOL</h3>
             <p>2017-2021</p>
             <p>Valedictorian</p>
@@ -339,7 +485,7 @@
   </div>
 
   <!-- AI PAGE -->
-  <div id='Page_ai'">
+  <div id='Page_ai'>
     <header>
       <h1>Artificial Intelligence</h1>
       <nav>
@@ -348,6 +494,7 @@
           <li><a href="#history">History</a></li>
           <li><a href="#applications">Applications</a></li>
           <li><a href="#trends">Trends</a></li>
+          <li><a href="#prompt">Assignment Prompt</a></li>
         </ul>
       </nav>
     </header>
@@ -379,10 +526,11 @@
           <li>Increased use of AI in industries such as agriculture and education</li>
         </ul>
       </section>
+      <section id="prompt">
+        <h2>Assignment Prompt</h2>
+        <p>Write an html file that will be used as a page on a website for a computer science student interested in artificial intelligence. It's for their assignment and they also want to use some 3D elements on the rest of their site.</p>
+      </section>
     </main>
-    <footer>
-      <p>Copyright © 2023 Computer Science Student</p>
-    </footer>
   </div>
 
   

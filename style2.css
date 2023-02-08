@@ -279,7 +279,10 @@ nav {
 }
   
 .emphasize {
+  display: block;
+  margin: 15px;
   font-weight: normal;
+  text-decoration-line:none;
   color: var(--custom-light);
   transition: 0.2s ease-out;
   }
@@ -539,6 +542,11 @@ button{
     margin-bottom: 5%;
   }
 
+  .group_section {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
   #Page_ai {
     display: none;
   }
@@ -620,12 +628,12 @@ button{
     
 .btn-flip:hover:after{
     opacity: 1;
-    transform: rotateX(0);
+    transform: translateY(0px);
 }
 		
 .btn-flip:hover:before{
     opacity: 0;
-    transform: rotateX(90deg);
+    transform: translateY(-5px);
 }
 	
 	
@@ -640,7 +648,7 @@ button{
     position: absolute;
 
     content: attr(data-back);
-    transform: rotateX(90deg);
+    transform: translateY(-5px);
 }
 	
 .btn-flip:before{
@@ -654,7 +662,7 @@ button{
     transition: var(--speed);
     position: relative;
     content: attr(data-front);
-    transform: rotateX(0);
+    transform: translateY(0px);
 }
 
 

@@ -191,6 +191,11 @@ nav {
   margin-left: 20px;
 }
 
+.group_section {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
 #Page_service {
   display: none;
 }
@@ -245,7 +250,11 @@ nav {
 
 /* EMPHASIS */
 .emphasize {
-font-weight: normal;
+  color: var(--custom-dark);
+  margin:10px;
+  display: block;
+  font-weight: normal;
+  text-decoration-line:none;
 }
 
 .emphasize:hover {
@@ -275,7 +284,12 @@ button:hover{
   animation-duration: 0.5s;
 }
 
+.dropdown:hover .ai-option {
+  display: none;
+}
+
 .dropdown-options {
+  z-index: 99;
   display: none;
   position: absolute;
   overflow: auto;
@@ -523,22 +537,22 @@ opacity: 1;
 /* PROJECT ITEMS */
 
 #projects {
-width: 90%;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(auto-fill, 400px);
-grid-row-gap: .5em;
-grid-column-gap: 1em;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, auto);
+  grid-row-gap: .5em;
+  grid-column-gap: 1em;
 }
 
 .project-item {
-background: white;
+  background: white;
 
-text-align: center;
+  text-align: center;
 
-outline-style: solid;
-outline-width: 0.1em;
-outline-color: black;
+  outline-style: solid;
+  outline-width: 0.1em;
+  outline-color: black;
 }
 
 .project-item:hover {
