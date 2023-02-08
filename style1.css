@@ -490,7 +490,7 @@ animation-fill-mode: forwards;
 
 .bg-img {
 position:absolute;
-transform: translate(-35px, -30px);
+transform: translate(-35px, -10px);
 width:400px;
 max-width: 400px;
 z-index:-1;
