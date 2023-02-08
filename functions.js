@@ -13,7 +13,7 @@ let isStyle1 = 1;
 
 // style controller
 function switchStyle() {
-  localStorage.setItem("page_stylesheet_name", isStyle1 ? './style1.css' : './style2.css');
+  localStorage.setItem("page_stylesheet_name", isStyle1 ? './style2.css' : './style1.css');
   load_style();
   show('Page_' + document.getElementById('current-page').innerText.toLowerCase());
   isStyle1 = !isStyle1;
